@@ -53,7 +53,7 @@ const getTodayCheckStatus = async () => {
  * @description 掘金签到功能
  */
 const checkIn = async () => {
-  let {error, isCheck} = await getTodayCheckStatus();
+  let {error, isCheck} = await getTodayDrawStatus();
   if (error) return console.log('查询签到失败');
   if (isCheck) return console.log('今日参与签到');
   const { cookie, baseUrl, apiUrl } = config;
